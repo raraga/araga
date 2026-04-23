@@ -5,9 +5,8 @@
             "type": "local",
             "enabled": true,
             "command": [
-                "wsl.exe",
-                "/home/raraga/.config/herd-lite/bin/php",
-                "/home/raraga/.local/dev/araga/artisan",
+                "php",
+                "artisan",
                 "boost:mcp"
             ]
         }
