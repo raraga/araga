@@ -1,6 +1,7 @@
 const submitBtn = document.querySelector('.btn');
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const contactForm = document.getElementById('contact-form');
 
 submitBtn.addEventListener('mouseenter', function() {
     this.textContent = 'All done? 👍';
@@ -9,6 +10,14 @@ submitBtn.addEventListener('mouseenter', function() {
 submitBtn.addEventListener('mouseleave', function() {
     this.textContent = 'Let\'s get started!';
 });
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+        setTimeout(() => {
+            contactForm.reset();
+        }, 100);
+    });
+}
 
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', function() {

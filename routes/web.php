@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('index');
@@ -15,6 +15,4 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::post('/contact', function(Request $request) {
-    dd($request->all());
-})->name('contact_inquiry');
+Route::post('/contact', ContactController::class)->name('contact_inquiry');
