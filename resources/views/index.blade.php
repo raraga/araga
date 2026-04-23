@@ -32,7 +32,7 @@
                             <h3>Let's collaborate!</h3>
                             <p>Got a project in mind? I'd love to hear about it. Whether you need a web app, mobile experience, or just want to brainstorm ideas, reach out and let's create something great together.</p>
                         </div>
-                        <form id="contact-form" class="form">
+                        <form method="POST" action="{{  route('contact_inquiry') }}" id="contact-form" class="form">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required>
