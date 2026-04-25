@@ -29,5 +29,15 @@
 
     <body>
         {{ $slot }}
+
+        @if (session('success'))
+            <x-notification message="{{ session('success') }}" type="success" />
+        @elseif (session('error'))
+            <x-notification message="{{ session('error') }}" type="error" />
+        @elseif (session('warning'))
+            <x-notification message="{{ session('warning') }}" type="warning" />
+        @elseif (session('info'))
+            <x-notification message="{{ session('info') }}" type="info" />
+        @endif
     </body>
 </html>
