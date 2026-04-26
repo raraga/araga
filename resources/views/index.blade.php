@@ -1,17 +1,17 @@
 <x-layout>
     <main>
-        <header class="header">
-                <nav class="nav">
-                    <button class="nav-toggle" aria-label="Toggle navigation">
+        <header class="header border-b-0">
+                <nav class="nav" x-data="{ open: false }">
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" @click="open = !open; $el.setAttribute('aria-expanded', open)">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                    <ul class="nav-menu">
-                        <li><a href="{{ route('index') }}">Home</a></li>
-                        <li><a href="{{ route('about') }}">About</a></li>
-                        <li><a href="{{ route('blog') }}">Blog</a></li>
-                        <li><a href="{{ route('index') }}#contact">Contact</a></li>
+                    <ul class="nav-menu" :class="{ 'active': open }">
+                        <li><a href="{{ route('index') }}" @click="open = false">Home</a></li>
+                        <li><a href="{{ route('about') }}" @click="open = false">About</a></li>
+                        <li><a href="{{ route('blog') }}" @click="open = false">Blog</a></li>
+                        <li><a href="{{ route('index') }}#contact" @click="open = false">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -24,6 +24,29 @@
 
                 <section id="works">
                     <div class="project-grid"></div>
+                </section>
+
+                <section id="logo-cloud">
+                    <div class="logo-cloud">
+                        <div class="logo-cloud-inner">
+                            <div class="logo-cloud-grid">
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" />
+                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" />
+
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Reform" />
+                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" />
+
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" />
+                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" />
+
+                                <img class="logo-cloud-img logo-cloud-img-dark logo-cloud-start-2" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal" />
+                                <img class="logo-cloud-img logo-cloud-start-2" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" />
+
+                                <img class="logo-cloud-img logo-cloud-img-dark logo-cloud-start-2 logo-cloud-start-auto" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" />
+                                <img class="logo-cloud-img logo-cloud-start-2 logo-cloud-start-auto" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" />
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="contact" class="contact-section">

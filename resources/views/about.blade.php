@@ -1,17 +1,17 @@
 <x-layout>
     <main>
         <header class="header">
-            <nav class="nav">
-                <button class="nav-toggle" aria-label="Toggle navigation">
+            <nav class="nav" x-data="{ open: false }">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" @click="open = !open; $el.setAttribute('aria-expanded', open)">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="{{ route('index') }}">Home</a></li>
-                    <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="{{ route('blog') }}">Blog</a></li>
-                    <li><a href="{{ route('index') }}#contact">Contact</a></li>
+                <ul class="nav-menu" :class="{ 'active': open }">
+                    <li><a href="{{ route('index') }}" @click="open = false">Home</a></li>
+                    <li><a href="{{ route('about') }}" @click="open = false">About</a></li>
+                    <li><a href="{{ route('blog') }}" @click="open = false">Blog</a></li>
+                    <li><a href="{{ route('index') }}#contact" @click="open = false">Contact</a></li>
                 </ul>
             </nav>
         </header>
