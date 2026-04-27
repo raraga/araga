@@ -30,20 +30,17 @@
                     <div class="logo-cloud">
                         <div class="logo-cloud-inner">
                             <div class="logo-cloud-grid">
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-white.svg" alt="Transistor" />
-                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" />
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/bkp.jpg" alt="BKP" />
+                                <img class="logo-cloud-img" src="/storage/bkp.jpg" alt="BKP" />
 
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-white.svg" alt="Reform" />
-                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" />
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/sac-state.jpg" alt="Sac State" />
+                                <img class="logo-cloud-img" src="/storage/sac-state.jpg" alt="Sac State" />
 
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-white.svg" alt="Tuple" />
-                                <img class="logo-cloud-img" src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" />
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/select-pt.jpg" alt="Select PT" />
+                                <img class="logo-cloud-img" src="/storage/select-pt.jpg" alt="Select PT" />
 
-                                <img class="logo-cloud-img logo-cloud-img-dark logo-cloud-start-2" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-white.svg" alt="SavvyCal" />
-                                <img class="logo-cloud-img logo-cloud-start-2" src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" />
-
-                                <img class="logo-cloud-img logo-cloud-img-dark logo-cloud-start-2 logo-cloud-start-auto" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-white.svg" alt="Statamic" />
-                                <img class="logo-cloud-img logo-cloud-start-2 logo-cloud-start-auto" src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" />
+                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/toshiba.jpg" alt="Toshiba" />
+                                <img class="logo-cloud-img" src="/storage/toshiba.jpg" alt="Toshiba" />
                             </div>
                         </div>
                     </div>

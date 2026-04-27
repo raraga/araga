@@ -168,50 +168,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-cloud-grid {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem 3rem;
-    max-width: 36rem;
-}
-
-@media (min-width: 640px) {
-    .logo-cloud-grid {
-        max-width: 40rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .logo-cloud-grid {
-        max-width: none;
-        grid-template-columns: repeat(5, 1fr);
-    }
+    max-width: 80rem;
 }
 
 .logo-cloud-img {
     width: 158px;
     height: 48px;
-    max-height: 3rem;
-    width: 100%;
     object-fit: contain;
-    grid-column: span 2;
+    flex-shrink: 0;
 }
 
-@media (min-width: 1024px) {
-    .logo-cloud-img {
-        grid-column: span 1;
-    }
-}
-
-.logo-cloud-start-2 {
-    grid-column-start: 2;
-}
-
-@media (min-width: 1024px) {
-    .logo-cloud-start-2 {
-        grid-column-start: auto;
-    }
-}
+/* logo-cloud-start-2 and logo-cloud-start-auto no longer needed with flexbox */
 
 .logo-cloud-img-dark {
     display: none;
