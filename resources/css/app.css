@@ -20,13 +20,22 @@
 :root {
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
-    --nav-bg: oklch(52% 0.105 223.128);
-    --nav-hover: oklch(79.5% 0.184 86.047);
-    --heading-color: oklch(55.4% 0.046 257.417);
+    --nav-bg: oklch(52% .105 223.128);
+    --nav-hover: oklch(79.5% .184 86.047);
+    --heading-color: oklch(55.4% .046 257.417);
     --text-color: #1f2937;
     --bg-color: #ffffff;
     --bg-secondary: #f3f4f6;
     --border-color: #e5e7eb;
+    --nav-menu-opacity: 1;
+    --nav-menu-visibility: visible;
+    --nav-menu-position: static;
+    --nav-menu-direction: row;
+    --nav-menu-bg: transparent;
+    --nav-menu-padding: 0;
+    --nav-menu-gap: 2rem;
+    --nav-menu-border: none;
+    --nav-menu-transform: none;
 }
 
 html {
@@ -100,7 +109,15 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: var(--nav-menu-gap);
+    opacity: var(--nav-menu-opacity);
+    visibility: var(--nav-menu-visibility);
+    position: var(--nav-menu-position);
+    flex-direction: var(--nav-menu-direction);
+    background-color: var(--nav-menu-bg);
+    padding: var(--nav-menu-padding);
+    border-bottom: var(--nav-menu-border);
+    transform: var(--nav-menu-transform);
 }
 
 .nav-menu a {
@@ -421,6 +438,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    :root {
+        --nav-menu-opacity: 0;
+        --nav-menu-visibility: hidden;
+        --nav-menu-position: fixed;
+        --nav-menu-direction: column;
+        --nav-menu-bg: var(--bg-color);
+        --nav-menu-padding: 1rem;
+        --nav-menu-gap: 1rem;
+        --nav-menu-border: 1px solid var(--border-color);
+        --nav-menu-transform: translateY(-10px);
+    }
+
     .nav {
         padding: 1rem;
     }
@@ -429,27 +458,11 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
 
-    .nav-menu {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: var(--bg-color);
-        padding: 1rem;
-        gap: 1rem;
-        border-bottom: 1px solid var(--border-color);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-    }
-
     .nav-menu.active {
-        background-color: var(--nav-bg);
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
+        --nav-menu-opacity: 1;
+        --nav-menu-visibility: visible;
+        --nav-menu-bg: var(--nav-bg);
+        --nav-menu-transform: translateY(0);
     }
 
     .nav-menu a {
@@ -460,5 +473,82 @@ h1, h2, h3, h4, h5, h6 {
     .content {
         padding: 2rem 1rem;
     }
+}
 
+.project-detail {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.project-info h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 0.001em;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+}
+
+.project-description {
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.project-photos {
+    width: 100%;
+}
+
+.photo-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.photo-thumbnail {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.photo-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+.no-photos {
+    color: #6b7280;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .project-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-info h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .photo-thumbnails {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }
