@@ -11,6 +11,6 @@ class ContactController extends Controller
     {
         Contact::create($request->validated());
 
-        return to_route('index')->with('success', 'Contact inquiry successfully submitted');
+        return to_route('index')->with('success', 'Thanks for the message!');
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -20,3 +21,5 @@ Route::get('/projects', function () {
 })->name('projects');
 
 Route::post('/contact', ContactController::class)->name('contact_inquiry');
+
+Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
