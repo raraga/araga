@@ -1,52 +1,8 @@
 <x-layout>
-<<<<<<< HEAD
-=======
-    <main>
-        <header class="header border-b-0">
-                <nav class="nav" x-data="{ open: false }">
-                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" @click="open = !open; $el.setAttribute('aria-expanded', open)">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="nav-menu" :class="{ 'active': open }">
-                        <li><a href="{{ route('index') }}" @click="open = false">Home</a></li>
-                        <li><a href="{{ route('about') }}" @click="open = false">About</a></li>
-                        <li><a href="{{ route('blog') }}" @click="open = false">Blog</a></li>
-                        <li><a href="{{ route('index') }}#contact" @click="open = false">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-
->>>>>>> refs/remotes/origin/main
             <main class="main">
                 <section id="home" class="hero">
                     <h1>Araga Development</h1>
                     <p>Build for mobile and desktop</p>
-                </section>
-
-                <section id="works">
-                    <div class="project-grid"></div>
-                </section>
-
-                <section id="logo-cloud">
-                    <div class="logo-cloud">
-                        <div class="logo-cloud-inner">
-                            <div class="logo-cloud-grid">
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/bkp.jpg" alt="BKP" />
-                                <img class="logo-cloud-img" src="/storage/bkp.jpg" alt="BKP" />
-
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/sac-state.jpg" alt="Sac State" />
-                                <img class="logo-cloud-img" src="/storage/sac-state.jpg" alt="Sac State" />
-
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/select-pt.jpg" alt="Select PT" />
-                                <img class="logo-cloud-img" src="/storage/select-pt.jpg" alt="Select PT" />
-
-                                <img class="logo-cloud-img logo-cloud-img-dark" src="/storage/toshiba.jpg" alt="Toshiba" />
-                                <img class="logo-cloud-img" src="/storage/toshiba.jpg" alt="Toshiba" />
-                            </div>
-                        </div>
-                    </div>
                 </section>
 
                 <section id="contact" class="contact-section">
