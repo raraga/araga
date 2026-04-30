@@ -28,6 +28,10 @@
     </head>
 
     <body>
-        {{ $slot }}
+        <header class="nav-container">
+            <x-main-navigation />
+        </header>
+            {{ $slot }}
+        <x-footer />
     </body>
 </html>
